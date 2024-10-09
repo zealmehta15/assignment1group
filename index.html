@@ -13,12 +13,10 @@
       <div class="container mx-auto p-6 flex justify-between items-center">
         <h1 class="text-2xl font-bold">The Converter</h1>
         <nav>
-          <ul class="flex space-x-4">
+          <ul class="flex space-x-5">
             <li>
-
-              <!--Test-->
               <button
-                class="bg-blue-400 text-white hover:text-red-500"
+                class="bg-blue-400 text-white hover:bg-blue-600 px-2 rounded-md"
                 onclick="showTab('weighttab')"
               >
                 Weight
@@ -26,7 +24,7 @@
             </li>
             <li>
               <button
-                class="bg-blue-400 text-white hover:text-red-500"
+                class="bg-blue-400 text-white hover:bg-blue-600 px-2 rounded-md"
                 onclick="showTab('distancetab')"
               >
                 Distance
@@ -34,11 +32,13 @@
             </li>
             <li>
               <button
-                class="bg-blue-400 text-white hover:text-red-500"
+                class="bg-blue-400 text-white hover:bg-blue-600 px-2 rounded-md"
                 onclick="showTab('temperaturetab')"
               >
                 Temperature
               </button>
+
+
             </li>
           </ul>
         </nav>
@@ -56,23 +56,23 @@
         onsubmit="event.preventDefault(); weightConversion();"
       >
         <div class="mb-4">
-          <label class="block bg-gray-200 text-gray-700 font-semibold p-2">
+          <label class="block bg-gray-200 text-gray-700 font-semibold p-2 rounded-t-md">
             Enter weight value/s (Comma separated)
           </label>
           <input
             type="text"
             id="weightvalues"
-            class="w-full px-4 py-5 border border-gray-500 rounded-lg"
+            class="w-full px-4 py-5 border border-gray-500 rounded-b-md"
             placeholder="000"
           />
-          <select id="weightOptions" class="border p-4 mt-4">
+          <select id="weightOptions" class="border p-3 mt-4">
             <option value="lbtokg">Pounds to Kilogram</option>
             <option value="kgtolb">Kilogram to Pounds</option>
           </select>
           <button
             type="button"
             onclick="weightConversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-3 px-4 mt-4 rounded-md"
           >
             Convert
           </button>
