@@ -34,15 +34,22 @@ function showTab(tabId) {
       return;
     }
   
-    if (option === 'lbtokg') {
-      result = result.map(val => (val * 0.453592).toFixed(2));
-    } else if (option === 'kgtolb') {
-      result = result.map(val => (val * 2.20462).toFixed(2));
-    }
-    
-    document.getElementById('weightResult').textContent = `Converted values: ${result.join(', ')}`;
+    let unitFrom, unitTo;
+  if (option === 'lbtokg') {
+    result = result.map(val => (val * 0.453592).toFixed(2));
+    unitFrom = "lb";
+    unitTo = "kg";
+  } else if (option === 'kgtolb') {
+    result = result.map(val => (val * 2.20462).toFixed(2));
+    unitFrom = "kg";
+    unitTo = "lb";
   }
   
+  const providedValues = input.join(', ');
+  const convertedValues = result.join(', ');
+  document.getElementById('weightResult').textContent = `${providedValues} ${unitFrom} = ${convertedValues} ${unitTo}`;
+}
+
   // Distance conversion function
   function distanceconversion() {
     const input = document.getElementById('distancevalues').value.split(',').map(Number);
@@ -56,14 +63,21 @@ function showTab(tabId) {
       return;
     }
   
-    if (option === 'miletoKm') {
-      result = result.map(val => (val * 1.60934).toFixed(2));
-    } else if (option === 'KMtomile') {
-      result = result.map(val => (val * 0.621371).toFixed(2));
-    }
-  
-    document.getElementById('distanceResult').textContent = `Converted values: ${result.join(', ')}`;
+    let unitFrom, unitTo;
+  if (option === 'miletoKm') {
+    result = result.map(val => (val * 1.60934).toFixed(2));
+    unitFrom = "miles";
+    unitTo = "km";
+  } else if (option === 'KMtomile') {
+    result = result.map(val => (val * 0.621371).toFixed(2));
+    unitFrom = "km";
+    unitTo = "miles";
   }
+  
+  const providedValues = input.join(', ');
+  const convertedValues = result.join(', ');
+  document.getElementById('distanceResult').textContent = `${providedValues} ${unitFrom} = ${convertedValues} ${unitTo}`;
+}
   
   // Temperature conversion function
   function temperatureconversion() {
@@ -78,12 +92,19 @@ function showTab(tabId) {
       return;
     }
   
-    if (option === 'ctoF') {
-      result = result.map(val => ((val * 9/5) + 32).toFixed(2));
-    } else if (option === 'Ftoc') {
-      result = result.map(val => (((val - 32) * 5/9).toFixed(2)));
-    }
-    
-    document.getElementById('temperatureResult').textContent = `Converted values: ${result.join(', ')}`;
+    let unitFrom, unitTo;
+  if (option === 'ctoF') {
+    result = result.map(val => ((val * 9/5) + 32).toFixed(2));
+    unitFrom = "°C";
+    unitTo = "°F";
+  } else if (option === 'Ftoc') {
+    result = result.map(val => (((val - 32) * 5/9).toFixed(2)));
+    unitFrom = "°F";
+    unitTo = "°C";
   }
+  
+  const providedValues = input.join(', ');
+  const convertedValues = result.join(', ');
+  document.getElementById('temperatureResult').textContent = `${providedValues} ${unitFrom} = ${convertedValues} ${unitTo}`;
+}
   
