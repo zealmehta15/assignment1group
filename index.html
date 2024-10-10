@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +17,7 @@
           <ul class="flex space-x-5">
             <li>
 
-              <!-- updated buttons againnn  -->
+              <!-- updated buttons again  -->
               <button
                 class="bg-blue-400 text-white hover:bg-blue-600 px-2 rounded-md"
                 onclick="showTab('weighttab')"
@@ -71,13 +72,23 @@
             <option value="lbtokg">Pounds to Kilogram</option>
             <option value="kgtolb">Kilogram to Pounds</option>
           </select>
+
+          <!--button to convert-->
           <button
             type="button"
             onclick="weightConversion()"
-            class="bg-blue-500 text-white py-3 px-4 mt-4 rounded-md"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3 rounded-md"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4m rounded-md"
+          >
+            Reset
+          </button>       
         </div>
         <div id="weightResult" class="mt-4 text-lg"></div>
       </form>
@@ -94,26 +105,36 @@
         onsubmit="event.preventDefault(); distanceconversion();"
       >
         <div class="mb-4">
-          <label class="block bg-gray-200 text-gray-700 font-semibold p-2">
+          <label class="block bg-gray-200 text-gray-700 font-semibold p-2 rounded-t-md">
             Enter distance value/s (Comma separated)
           </label>
           <input
             type="text"
             id="distancevalues"
-            class="w-full px-4 py-5 border border-gray-500 rounded-lg"
+            class="w-full px-4 py-5 border border-gray-500 rounded-b-md"
             placeholder="000"
           />
-          <select id="distanceoptions" class="border p-4 mt-4">
+          <select id="distanceoptions" class="border p-3 mt-4">
             <option value="miletoKm">Miles to Kilometers</option>
             <option value="KMtomile">Kilometers to Miles</option>
           </select>
+
+          <!--button to convert-->
           <button
             type="button"
             onclick="distanceconversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3 rounded-md"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4 rounded-md"
+          >
+            Reset
+          </button>       
         </div>
         <div id="distanceResult" class="mt-4 text-lg"></div>
       </form>
@@ -130,26 +151,36 @@
         onsubmit="event.preventDefault(); temperatureconversion();"
       >
         <div class="mb-4">
-          <label class="block bg-gray-200 text-gray-700 font-semibold p-2">
+          <label class="block bg-gray-200 text-gray-700 font-semibold p-2 rounded-t-md">
             Enter temperature value/s (Comma separated)
           </label>
           <input
             type="text"
             id="temperaturevalues"
-            class="w-full px-4 py-5 border border-gray-500 rounded-lg"
+            class="w-full px-4 py-5 border border-gray-500 rounded-b-md"
             placeholder="000"
           />
-          <select id="temperatureoptions" class="border p-4 mt-4">
+          <select id="temperatureoptions" class="border p-3 mt-4">
             <option value="ctoF">Celsius to Fahrenheit</option>
             <option value="Ftoc">Fahrenheit to Celsius</option>
           </select>
+          
+          <!--button to convert-->
           <button
             type="button"
             onclick="temperatureconversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3 rounded-md"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4 rounded-md"
+          >
+            Reset
+          </button>       
         </div>
         <div id="temperatureResult" class="mt-4 text-lg"></div>
       </form>
