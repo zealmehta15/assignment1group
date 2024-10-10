@@ -69,13 +69,23 @@
             <option value="lbtokg">Pounds to Kilogram</option>
             <option value="kgtolb">Kilogram to Pounds</option>
           </select>
+
+          <!--button to convert-->
           <button
             type="button"
             onclick="weightConversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4"
+          >
+            Reset
+          </button>       
         </div>
         <div id="weightResult" class="mt-4 text-lg"></div>
       </form>
@@ -105,13 +115,23 @@
             <option value="miletoKm">Miles to Kilometers</option>
             <option value="KMtomile">Kilometers to Miles</option>
           </select>
+
+          <!--button to convert-->
           <button
             type="button"
             onclick="distanceconversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4"
+          >
+            Reset
+          </button>       
         </div>
         <div id="distanceResult" class="mt-4 text-lg"></div>
       </form>
@@ -141,13 +161,23 @@
             <option value="ctoF">Celsius to Fahrenheit</option>
             <option value="Ftoc">Fahrenheit to Celsius</option>
           </select>
+          
+          <!--button to convert-->
           <button
             type="button"
             onclick="temperatureconversion()"
-            class="bg-blue-500 text-white py-2 px-4 mt-4"
+            class="bg-blue-500 text-white py-2 px-4 mt-4 mx-3"
           >
             Convert
-          </button>
+
+          <!--button to reset-->
+          <button
+          type="button"
+          onclick="resetFields()"
+          class="bg-red-500 text-white py-2 px-4 mt-4"
+          >
+            Reset
+          </button>       
         </div>
         <div id="temperatureResult" class="mt-4 text-lg"></div>
       </form>

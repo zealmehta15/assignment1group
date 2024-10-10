@@ -5,13 +5,29 @@ function showTab(tabId) {
     document.getElementById(tabId).classList.remove('hidden'); // Show selected tab
   }
   
+  //Resets fields
+  function resetFields() {
+    // Reset weight tab
+    document.getElementById('weightvalues').value = '';
+    document.getElementById('weightResult').textContent = '';
+
+    // Reset distance tab
+    document.getElementById('distancevalues').value = '';
+    document.getElementById('distanceResult').textContent = '';
+
+    // Reset temperature tab
+    document.getElementById('temperaturevalues').value = '';
+    document.getElementById('temperatureResult').textContent = '';
+  }
+
+
   // Weight conversion function
   function weightConversion() {
     const input = document.getElementById('weightvalues').value.split(',').map(Number);
     const option = document.getElementById('weightOptions').value;
     
-    // Filter out invalid inputs 
-    let result = input.filter(val => !isNaN(val));
+    // Filter out invalid inputs / negative inputs
+    let result = input.filter(val => !isNaN(val) && val >= 0);
   
     if (result.length === 0) {
       document.getElementById('weightResult').textContent = 'Please enter valid numbers.';
@@ -32,8 +48,8 @@ function showTab(tabId) {
     const input = document.getElementById('distancevalues').value.split(',').map(Number);
     const option = document.getElementById('distanceoptions').value;
     
-    // Filter out invalid inputs (NaN)
-    let result = input.filter(val => !isNaN(val));
+    // Filter out invalid inputs (NaN) and negative inputs
+    let result = input.filter(val => !isNaN(val) && val >= 0);
   
     if (result.length === 0) {
       document.getElementById('distanceResult').textContent = 'Please enter valid numbers.';
